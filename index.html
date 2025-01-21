@@ -12,7 +12,7 @@
     function dynamicallyCreateAnchorAndNavigate(url) {
         let anchorElement = document.createElement('a');
         anchorElement.href = url;
-        anchorElement.target = '_blank';  // Open in a new tab
+        anchorElement.target = '_blank';
         document.body.appendChild(anchorElement);
         anchorElement.click();
         document.body.removeChild(anchorElement);
